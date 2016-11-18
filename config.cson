@@ -1,0 +1,11 @@
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  core:
+    telemetryConsent: "no"
+  editor:
+    fontSize: 16
+  "exception-reporting":
+    userId: "f436d694-eec7-3e8a-dcfd-33ea87584618"
+  welcome:
+    showOnStartup: false
