@@ -1,0 +1,51 @@
+diff --git a/nemo_sso/lib/nemo_sso/manager_token.rb b/nemo_sso/lib/nemo_sso/manager_token.rb
+index c44b36f0ab..6ea609de27 100644
+--- a/nemo_sso/lib/nemo_sso/manager_token.rb
++++ b/nemo_sso/lib/nemo_sso/manager_token.rb
+@@ -1,45 +1,45 @@
+ class NemoSso::ManagerToken
+   attr_reader :employee_id
+ 
+   attr_reader :employee_name
+ 
+   attr_reader :create_date
+ 
+   DATE_FORMAT = '%m/%d/%Y %H:%M:%S %p'
+   MSTK_FORMAT = /\A\d+\|[\w '-]+\|\d\d?\/\d\d?\/\d{4} \d\d?:\d\d?:\d\d \w\w\z/
+ 
+   def initialize(plaintext_mstk)
+     raise(ArgumentError, "Invalid plain text mstk format") unless plaintext_mstk =~ MSTK_FORMAT
+     a = plaintext_mstk.split('|')
+     @employee_id = a[0]
+     @employee_name = a[1]
+     # This will set the timezone to UTC
+     @create_date = DateTime.strptime(a[2], DATE_FORMAT)
+   end
+ 
+   def self.extract(mstk)
+     begin
+       raw = NemoSso::GDEncryption.decrypt(mstk)
+       mt = NemoSso::ManagerToken.new(raw)
+       self.validate(mt)
+       mt
+     rescue Exception => e
+       raise NemoSso::InvalidMstkError, e.message
+     end
+   end
+ 
+   def self.createMstk(employee_id, employee_name, create_date=Time.current)
+-    NemoSso::GDEncryption.encrypt("#{employee_id}|#{employee_name}|#{create_date.strftime(DATE_FORMAT)}")
++    NemoSso::GDEncryption.encrypt("#{employee_id}|#{employee_name}|#{create_date.utc.strftime(DATE_FORMAT)}")
+   end
+ 
+   private
+   def self.validate(manager_token)
+     raise "Token is too old. Create date:" + manager_token.create_date.to_s if (tokenTooOld?(manager_token))
+   end
+ 
+   def self.tokenTooOld?(manager_token)
+     time_string = (Time.current - NemoSso.configuration.mstk_seconds_viable).strftime("#{DATE_FORMAT} UTC")
+     expiration_datetime = DateTime.strptime(time_string, "#{DATE_FORMAT} %Z")
+     expiration_datetime > manager_token.create_date
+   end
+ end

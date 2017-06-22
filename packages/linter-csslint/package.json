@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
+        "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
-        "spec": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
+        "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
+        "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/apm-install-dir-116911-5933-1684kia"
+      "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117127-8224-1ar3i9t"
     ]
   ],
-  "_from": "../d-116911-5933-1ed63it/package.tgz",
-  "_id": "linter-csslint@1.3.3",
+  "_from": "../d-117127-8224-8vw8wv/package.tgz",
+  "_id": "linter-csslint@1.3.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-csslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
+    "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
-    "spec": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
+    "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
+    "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116911-5933-1ed63it/package.tgz",
-  "_shasum": "15a49e57d325ac8ecc1f00aabaf78c85b7b2d57c",
+  "_resolved": "file:../d-117127-8224-8vw8wv/package.tgz",
+  "_shasum": "b75983bfcce090f0ac9192dee2d603b5ce1a29e4",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/d-116911-5933-1ed63it/package.tgz",
-  "_where": "/private/var/folders/g0/rsqp60lj2xl79wrb2c0331140000gp/T/apm-install-dir-116911-5933-1684kia",
+  "_spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117127-8224-8vw8wv/package.tgz",
+  "_where": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117127-8224-1ar3i9t",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-csslint/issues"
   },
@@ -47,15 +47,18 @@
     }
   },
   "dependencies": {
-    "atom-linter": "^8.0.0",
+    "atom-linter": "^9.0.0",
     "atom-package-deps": "^4.0.1",
-    "atomlinter-csslint": "0.10.0"
+    "atomlinter-csslint": "0.10.1"
   },
   "description": "Lint CSS on the fly, using csslint",
   "devDependencies": {
-    "eslint": "^3.6.1",
-    "eslint-config-airbnb-base": "^8.0.0",
-    "eslint-plugin-import": "^1.16.0"
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "engines": {
+    "atom": ">=1.4.0 <2.0.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
@@ -74,7 +77,6 @@
       "atom": true
     },
     "env": {
-      "es6": true,
       "node": true
     }
   },
@@ -107,8 +109,8 @@
     "url": "git+https://github.com/AtomLinter/linter-csslint.git"
   },
   "scripts": {
-    "lint": "coffeelint lib && eslint spec",
+    "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "1.3.3"
+  "version": "1.3.4"
 }

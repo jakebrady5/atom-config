@@ -1,0 +1,23 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+#127.0.0.1 onlinestore.dev-godaddy.com
+#127.0.0.1 a12b-3c4d-5f6a-7b8c-9d0e.onlinestore.dev-godaddy.com
+#127.0.0.1 instantpage.dev-godaddy.com
+#127.0.0.1 localdevbusiness.onlinestore.dev-godaddy.com
+#127.0.0.1 instantpage.api.dev-godaddy.com
+#127.0.0.1 4409b04d-142d-4dd8-8500-2bae72102566.onlinestore.dev-godaddy.com
+#127.0.0.1 01ebb7e9-d2ad-11e6-9b8c-0050569575d8.onlinestore.dev-godaddy.com
+#
+#127.0.0.1 32da6551-5118-4337-a43b-87ead541d109.onlinestore.dev-godaddy.com
+#127.0.0.1 5666b529-d9d2-11e6-96bf-0050569575d8.onlinestore.dev-godaddy.com
+#
+#127.0.0.1 onboarding.dev-godaddy.com
+#127.0.0.1 websites.dev-godaddy.com
+#127.0.0.1 onlinestore.dev-secureserver.net

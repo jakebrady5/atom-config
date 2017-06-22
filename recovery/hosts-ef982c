@@ -1,0 +1,41 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+127.0.0.1 onlinestore.dev-godaddy.com
+127.0.0.1 a12b-3c4d-5f6a-7b8c-9d0e.onlinestore.dev-godaddy.com
+127.0.0.1 instantpage.dev-godaddy.com
+127.0.0.1 localdevbusiness.onlinestore.dev-godaddy.com
+127.0.0.1 instantpage.api.dev-godaddy.com
+127.0.0.1 4409b04d-142d-4dd8-8500-2bae72102566.onlinestore.dev-godaddy.com
+127.0.0.1 01ebb7e9-d2ad-11e6-9b8c-0050569575d8.onlinestore.dev-godaddy.com
+
+127.0.0.1 32da6551-5118-4337-a43b-87ead541d109.onlinestore.dev-godaddy.com
+127.0.0.1 5666b529-d9d2-11e6-96bf-0050569575d8.onlinestore.dev-godaddy.com
+
+127.0.0.1 onboarding.dev-godaddy.com
+127.0.0.1 websites.dev-godaddy.com
+127.0.0.1 onlinestore.dev-secureserver.net
+
+127.0.0.1 test.localhost
+
+#STAGING ATS
+10.7.96.19 94cb36a2-a873-11e3-a6ae-f04da2075201.onlinestore.godaddy.com # Sri's OLS standalone site
+10.7.96.19 94cb36a2-a873-11e3-a6ae-f04da2075201.mysimplestore.com
+10.7.96.19 chipsetmakers.mysimplestore.com
+
+#STAGING #1
+10.7.96.17 94cb36a2-a873-11e3-a6ae-f04da2075201.onlinestore.godaddy.com
+10.7.96.17 94cb36a2-a873-11e3-a6ae-f04da2075201.mysimplestore.com
+10.7.96.17 chipsetmakers.mysimplestore.com
+
+#10.7.96.17 6d536ad4-a8d1-11e4-bc0f-f04da207780b.onlinestore.godaddy.com  #Not Live #Staging
+
+#STAGING #2
+10.7.96.18 94cb36a2-a873-11e3-a6ae-f04da2075201.onlinestore.godaddy.com
+10.7.96.18 94cb36a2-a873-11e3-a6ae-f04da2075201.mysimplestore.com

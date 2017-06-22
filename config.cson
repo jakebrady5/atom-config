@@ -2,10 +2,18 @@
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
   core:
+    disabledPackages: [
+      "linter-csslint"
+      "linter-eslint"
+    ]
     telemetryConsent: "no"
   editor:
-    fontSize: 16
+    fontSize: 15
+    showIndentGuide: true
   "exception-reporting":
     userId: "f436d694-eec7-3e8a-dcfd-33ea87584618"
+  "git-blame":
+    columnWidth: 206
+  linter: {}
   welcome:
     showOnStartup: false
