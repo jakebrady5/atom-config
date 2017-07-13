@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
+        "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
-        "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
+        "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
+        "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117515-20916-1cko80n.25dgarwwmi"
+      "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117530-57910-1pvj4m4.k23px2yb9"
     ]
   ],
-  "_from": "../d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
-  "_id": "file-icons@2.1.7",
+  "_from": "../d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
+  "_id": "file-icons@2.1.8",
   "_inCache": true,
   "_location": "/file-icons",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
+    "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
-    "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
+    "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
+    "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
-  "_shasum": "130c9dad88f0de4892e3ed5380b871458e9b273c",
+  "_resolved": "file:../d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
+  "_shasum": "75003478bfc451465680051982fdf8950a0da711",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117515-20916-43w4c7.ur7pn9udi/package.tgz",
-  "_where": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117515-20916-1cko80n.25dgarwwmi",
+  "_spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117530-57910-8f8u9b.ngms8257b9/package.tgz",
+  "_where": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117530-57910-1pvj4m4.k23px2yb9",
   "atomTestRunner": "atom-mocha",
   "bugs": {
     "url": "https://github.com/file-icons/atom/issues"
@@ -126,7 +126,7 @@
     "unzip": "*"
   },
   "engines": {
-    "atom": ">1.11.0"
+    "atom": ">1.17.0"
   },
   "homepage": "https://github.com/file-icons/atom",
   "license": "MIT",
@@ -152,7 +152,7 @@
     "type": "git",
     "url": "git+https://github.com/file-icons/atom.git"
   },
-  "version": "2.1.7",
+  "version": "2.1.8",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -583,12 +583,12 @@
       },
       {
         "name": "snapdragon-node",
-        "version": "2.0.1",
+        "version": "2.1.1",
         "path": "node_modules/snapdragon-node/index.js"
       },
       {
         "name": "snapdragon-util",
-        "version": "3.0.0",
+        "version": "3.0.1",
         "path": "node_modules/snapdragon-util/index.js"
       },
       {
@@ -1672,7 +1672,7 @@
         "dependencies": {
           "define-property": "^1.0.0",
           "isobject": "^3.0.0",
-          "snapdragon-util": "^3.0.0"
+          "snapdragon-util": "^3.0.1"
         }
       },
       {
