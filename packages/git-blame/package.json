@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
+        "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
-        "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
+        "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
+        "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117522-98003-1f56lfl.lmaxo2mx6r"
+      "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117724-27938-fycrlh.qabsvh1tt9"
     ]
   ],
-  "_from": "../d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
-  "_id": "git-blame@1.1.1",
+  "_from": "../d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
+  "_id": "git-blame@1.2.2",
   "_inCache": true,
   "_location": "/git-blame",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
+    "raw": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
-    "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
+    "rawSpec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
+    "spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
-  "_shasum": "7d57d2f836bebb2bb504e29cbd1ad38ac5c557d8",
+  "_resolved": "file:../d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
+  "_shasum": "4d3d6e3aa4b584d91c8216318979d2ae66bc54d9",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117522-98003-1fdjufg.3jaa21q0k9/package.tgz",
-  "_where": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117522-98003-1f56lfl.lmaxo2mx6r",
+  "_spec": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/d-117724-27938-sw7mwg.atgu3gcik9/package.tgz",
+  "_where": "/private/var/folders/kh/t8br8c6j55ndyxlcn1lmc998_391g1/T/apm-install-dir-117724-27938-fycrlh.qabsvh1tt9",
   "activationCommands": {
     "atom-text-editor": [
       "git-blame:toggle"
@@ -75,13 +75,13 @@
   "scripts": {
     "bump": "standard-version"
   },
-  "version": "1.1.1",
+  "version": "1.2.2",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "asap",
-        "version": "2.0.5",
+        "version": "2.0.6",
         "path": "node_modules/asap/asap.js"
       },
       {
@@ -136,7 +136,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.23",
+        "version": "0.10.29",
         "path": "node_modules/es5-ext/index.js"
       },
       {
@@ -171,7 +171,7 @@
       },
       {
         "name": "fbjs",
-        "version": "0.8.12",
+        "version": "0.8.14",
         "path": "node_modules/fbjs/index.js"
       },
       {
@@ -236,7 +236,7 @@
       },
       {
         "name": "js-tokens",
-        "version": "3.0.1",
+        "version": "3.0.2",
         "path": "node_modules/js-tokens/index.js"
       },
       {
@@ -281,7 +281,7 @@
       },
       {
         "name": "node-fetch",
-        "version": "1.7.1",
+        "version": "1.7.2",
         "path": "node_modules/node-fetch/index.js"
       },
       {
@@ -406,7 +406,7 @@
       },
       {
         "name": "ua-parser-js",
-        "version": "0.7.13",
+        "version": "0.7.14",
         "path": "node_modules/ua-parser-js/src/ua-parser.js"
       },
       {
@@ -1376,6 +1376,7 @@
         "node_modules/es5-ext/array/#/indexes-of.js",
         "node_modules/es5-ext/array/#/intersection.js",
         "node_modules/es5-ext/array/#/is-copy.js",
+        "node_modules/es5-ext/array/#/is-empty.js",
         "node_modules/es5-ext/array/#/is-uniq.js",
         "node_modules/es5-ext/array/#/keys/implement.js",
         "node_modules/es5-ext/array/#/keys/index.js",
@@ -1599,6 +1600,8 @@
         "node_modules/es5-ext/object/copy.js",
         "node_modules/es5-ext/object/count.js",
         "node_modules/es5-ext/object/create.js",
+        "node_modules/es5-ext/object/ensure-array.js",
+        "node_modules/es5-ext/object/ensure-finite-number.js",
         "node_modules/es5-ext/object/ensure-natural-number-value.js",
         "node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/es5-ext/object/ensure-promise.js",
@@ -1617,6 +1620,7 @@
         "node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/es5-ext/object/is-copy.js",
         "node_modules/es5-ext/object/is-empty.js",
+        "node_modules/es5-ext/object/is-finite-number.js",
         "node_modules/es5-ext/object/is-number-value.js",
         "node_modules/es5-ext/object/is-object.js",
         "node_modules/es5-ext/object/is-plain-object.js",
@@ -1650,6 +1654,7 @@
         "node_modules/es5-ext/object/validate-array-like.js",
         "node_modules/es5-ext/object/validate-stringifiable-value.js",
         "node_modules/es5-ext/object/validate-stringifiable.js",
+        "node_modules/es5-ext/optional-chaining.js",
         "node_modules/es5-ext/reg-exp/#/index.js",
         "node_modules/es5-ext/reg-exp/#/is-sticky.js",
         "node_modules/es5-ext/reg-exp/#/is-unicode.js",
@@ -1732,6 +1737,7 @@
         "node_modules/es5-ext/string/raw/index.js",
         "node_modules/es5-ext/string/raw/is-implemented.js",
         "node_modules/es5-ext/string/raw/shim.js",
+        "node_modules/es5-ext/to-short-string-representation.js",
         "node_modules/es6-iterator/#/chain.js",
         "node_modules/es6-iterator/array.js",
         "node_modules/es6-iterator/for-of.js",
@@ -3566,7 +3572,6 @@
         "node_modules/temp/package.json",
         "node_modules/ua-parser-js/bower.json",
         "node_modules/ua-parser-js/package.json",
-        "node_modules/ua-parser-js/ua-parser-js.jquery.json",
         "node_modules/underscore/package.json",
         "node_modules/underscore-plus/package.json",
         "node_modules/whatwg-fetch/package.json",
