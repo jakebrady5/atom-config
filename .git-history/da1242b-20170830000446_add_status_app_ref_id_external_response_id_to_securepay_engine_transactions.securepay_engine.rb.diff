@@ -1,0 +1,16 @@
+diff --git a/db/migrate/20170830000446_add_status_app_ref_id_external_response_id_to_securepay_engine_transactions.securepay_engine.rb b/db/migrate/20170830000446_add_status_app_ref_id_external_response_id_to_securepay_engine_transactions.securepay_engine.rb
+index 32c6014..acaf559 100644
+--- a/db/migrate/20170830000446_add_status_app_ref_id_external_response_id_to_securepay_engine_transactions.securepay_engine.rb
++++ b/db/migrate/20170830000446_add_status_app_ref_id_external_response_id_to_securepay_engine_transactions.securepay_engine.rb
+@@ -1,11 +1,10 @@
+ # This migration comes from securepay_engine (originally 20170829144700)
+ class AddStatusAppRefIdExternalResponseIdToSecurepayEngineTransactions < ActiveRecord::Migration[5.1]
+   def change
+     add_column :securepay_engine_transactions, :status, :string, after: :approval_code
+     add_column :securepay_engine_transactions, :app_ref_id, :string, after: :status
+-    add_column :securepay_engine_transactions, :external_response_id, :bigint, after: :app_ref_id
+ 
+     add_index :securepay_engine_transactions, [:account_id, :app_ref_id], name: 'index_securepay_engine_transactions_on_account_id_app_ref_id'
+     remove_index :securepay_engine_transactions, name: 'index_securepay_engine_transactions_on_account_id'
+   end
+ end

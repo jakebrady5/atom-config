@@ -13,7 +13,8 @@
   "exception-reporting":
     userId: "f436d694-eec7-3e8a-dcfd-33ea87584618"
   "git-blame":
-    columnWidth: 304
+    columnWidth: 263
   linter: {}
+  "tree-view": {}
   welcome:
     showOnStartup: false
