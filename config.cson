@@ -16,6 +16,8 @@
   "git-blame":
     columnWidth: 391
   linter: {}
+  "linter-ui-default":
+    showPanel: true
   "tree-view": {}
   welcome:
     showOnStartup: false

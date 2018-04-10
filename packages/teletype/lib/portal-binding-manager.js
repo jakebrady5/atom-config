@@ -1,6 +1,7 @@
 const {Emitter} = require('atom')
 const HostPortalBinding = require('./host-portal-binding')
 const GuestPortalBinding = require('./guest-portal-binding')
+const {findPortalId} = require('./portal-id-helpers')
 
 module.exports =
 class PortalBindingManager {
@@ -18,14 +19,14 @@ class PortalBindingManager {
 
     if (this.hostPortalBindingPromise) {
       const disposePromise = this.hostPortalBindingPromise.then((portalBinding) => {
-        portalBinding.dispose()
+        portalBinding.close()
       })
       disposePromises.push(disposePromise)
     }
 
     this.promisesByGuestPortalId.forEach(async (portalBindingPromise) => {
       const disposePromise = portalBindingPromise.then((portalBinding) => {
-        if (portalBinding) portalBinding.dispose()
+        if (portalBinding) portalBinding.leave()
       })
       disposePromises.push(disposePromise)
     })
@@ -102,15 +103,26 @@ class PortalBindingManager {
     }
   }
 
-  getGuestPortalBindings () {
-    return Promise.all(this.promisesByGuestPortalId.values())
+  async getGuestPortalBindings () {
+    const portalBindings = await Promise.all(this.promisesByGuestPortalId.values())
+    return portalBindings.filter((binding) => binding != null)
+  }
+
+  async getRemoteEditors () {
+    const remoteEditors = []
+    for (const bindingPromise of this.promisesByGuestPortalId.values()) {
+      const portalBinding = await bindingPromise
+      remoteEditors.push(...portalBinding.getRemoteEditors())
+    }
+
+    return remoteEditors
   }
 
   async getActiveGuestPortalBinding () {
     const activePaneItem = this.workspace.getActivePaneItem()
-    for (const [_, portalBindingPromise] of this.promisesByGuestPortalId) {
+    for (const [_, portalBindingPromise] of this.promisesByGuestPortalId) { // eslint-disable-line no-unused-vars
       const portalBinding = await portalBindingPromise
-      if (portalBinding.getActivePaneItem() === activePaneItem) {
+      if (portalBinding.hasPaneItem(activePaneItem)) {
         return portalBinding
       }
     }
@@ -121,6 +133,24 @@ class PortalBindingManager {
     const guestPortalBindings = await this.getGuestPortalBindings()
 
     return (hostPortalBinding != null) || (guestPortalBindings.length > 0)
+  }
+
+  async getRemoteEditorForURI (uri) {
+    const uriComponents = uri.replace('atom://teletype/', '').split('/')
+
+    const portalId = findPortalId(uriComponents[1])
+    if (uriComponents[0] !== 'portal' || !portalId) return null
+
+    const editorProxyId = Number(uriComponents[3])
+    if (uriComponents[2] !== 'editor' || Number.isNaN(editorProxyId)) return null
+
+    const guestPortalBindingPromise = this.promisesByGuestPortalId.get(portalId)
+    if (guestPortalBindingPromise) {
+      const guestPortalBinding = await guestPortalBindingPromise
+      return guestPortalBinding.getRemoteEditor(editorProxyId)
+    } else {
+      throw new Error('Cannot open an editor belonging to a portal that has not been joined')
+    }
   }
 
   didDisposeGuestPortalBinding (portalBinding) {

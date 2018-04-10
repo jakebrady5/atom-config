@@ -18,7 +18,7 @@
     }
   }
 
-  &.outdated {
+  &.outdated, &.initialization-error {
     color: @text-color-error;
 
     &:hover {
@@ -162,7 +162,7 @@
       }
     }
 
-    &-portal-id {
+    &-portal-url {
       display: flex;
       flex-direction: row;
       margin-bottom: 5px;
@@ -231,6 +231,45 @@
 
 .SignInComponent-GitHubLogo {
   .octicon(mark-github, 40px);
+}
+
+.JoinViaExternalAppDialog {
+  padding: @component-padding;
+
+  &-cancel {
+    position: absolute;
+    padding: @component-padding;
+    top: 0;
+    right: 0;
+    text-align: right;
+    &::before {
+      margin-right: 0;
+    }
+  }
+
+  &-uri {
+    padding: @component-padding/2 @component-padding;
+    color: @text-color-highlight;
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+    background-color: @background-color-highlight;
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .input-label {
+    margin-left: 2em;
+    margin-right: 3em;
+  }
+
+  .input-checkbox {
+    margin-left: -2em;
+    margin-right: .5em;
+  }
 }
 
 .JoinPortalComponent--no-prompt,
@@ -353,10 +392,15 @@
   @avatar-size: 40px;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
-  right: @corner-margin;
+  justify-content: flex-end;
+  font-size: 16px;
   text-align: right;
+  left: 0;
+  right: @corner-margin;
+  bottom: @corner-margin;
+  overflow: hidden;
 
   img {
     cursor: pointer;
@@ -365,54 +409,46 @@
   }
 
   .SitePositionsComponent-site {
-    display: flex;
-  }
+    margin-left: @avatar-margin;
 
-  &.upper-right {
-    top: @corner-margin;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    .SitePositionsComponent-site {
-      margin-left: @avatar-margin;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+    &.viewing-non-portal-item {
+      opacity: 0.5;
     }
-  }
 
-  &.middle-right {
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    .icon-link {
+      position: absolute;
+      margin-left: 24px;
+      margin-top: 24px;
+      color: @text-color-info;
+      pointer-events: none;
 
-    .SitePositionsComponent-site {
-      margin-bottom: @avatar-margin;
-      flex-direction: row;
-      align-items: center;
-    }
-  }
+      &::before {
+        position: relative;
+        z-index: 2;
+      }
 
-  &.lower-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    bottom: @corner-margin;
-
-    .SitePositionsComponent-site {
-      margin-left: @avatar-margin;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
+      // background cover
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: -2px;
+        top: 4px;
+        width: 15px;
+        height: 11px;
+        border-radius: 6px;
+        background-color: @syntax-background-color;
+      }
     }
   }
 }
 
-.PackageOutdatedComponent {
+.PackageOutdatedComponent, .PackageInitializationErrorComponent {
   color: @text-color;
   text-align: center;
   padding: 0 @component-padding @component-padding @component-padding;
+
+  .btn {
+    margin-bottom: @component-padding * 1.5;
+  }
 }

@@ -1,8 +1,12 @@
 const assert = require('assert')
-const {Disposable} = require('atom')
+const {buildAtomEnvironment, destroyAtomEnvironments} = require('./helpers/atom-environments')
 const PortalBindingManager = require('../lib/portal-binding-manager')
 
 suite('PortalBindingManager', () => {
+  teardown(async () => {
+    await destroyAtomEnvironments()
+  })
+
   suite('host portal binding', () => {
     test('idempotently creating the host portal binding', async () => {
       const manager = buildPortalBindingManager()
@@ -61,6 +65,19 @@ suite('PortalBindingManager', () => {
       manager.client.resolveLastJoinPortalPromise(buildPortal())
       assert(await portalBinding1Promise2)
     })
+
+    suite('getGuestPortalBindings', () => {
+      test('excludes portals that could not be joined', async () => {
+        const manager = buildPortalBindingManager()
+
+        manager.createGuestPortalBinding('1')
+        manager.client.resolveLastJoinPortalPromise(null)
+        const portal2BindingPromise = manager.createGuestPortalBinding('2')
+        manager.client.resolveLastJoinPortalPromise(buildPortal())
+
+        assert.deepEqual(await manager.getGuestPortalBindings(), [await portal2BindingPromise])
+      })
+    })
   })
 
   test('adding and removing classes from the workspace element', async () => {
@@ -85,6 +102,7 @@ suite('PortalBindingManager', () => {
 })
 
 function buildPortalBindingManager () {
+  const {workspace, notifications: notificationManager} = buildAtomEnvironment()
   const client = {
     resolveLastCreatePortalPromise: null,
     resolveLastJoinPortalPromise: null,
@@ -95,33 +113,18 @@ function buildPortalBindingManager () {
       return new Promise((resolve) => { this.resolveLastJoinPortalPromise = resolve })
     }
   }
-
-  const notificationManager = {
-    addInfo () {},
-    addSuccess () {},
-    addError (error, options) {
-      throw new Error(error + '\n' + options.description)
-    }
-  }
-
-  const workspace = {
-    element: document.createElement('div'),
-    getElement () {
-      return this.element
-    },
-    observeActiveTextEditor () {
-      return new Disposable(() => {})
-    },
-    observeActivePaneItem () {
-      return new Disposable(() => {})
-    }
-  }
-
   return new PortalBindingManager({client, workspace, notificationManager})
 }
 
-function buildPortal () {
+let nextPortalId = 1
+let nextIdentityId = 1
+function buildPortal ({id, login} = {}) {
   return {
+    id: id != null ? id : (nextPortalId++).toString(),
+    activateEditorProxy () {},
+    getSiteIdentity () {
+      return {login: login || 'identity-' + nextIdentityId++}
+    },
     dispose () {
       this.delegate.dispose()
     },
